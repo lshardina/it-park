@@ -39,10 +39,9 @@ public class Arifmetika {
          return arg1 * arg2;
     }
 
-    public static double delenie(int arg1, int arg2) {
+    public static double delenie(double arg1, int arg2) {
         // Расчет ЧАСТНОГО  двух чисел
-        double ch;
-        ch = arg1 / arg2;
-        return ch;
-    }
+        return arg1 / arg2;
+
+        }
 }

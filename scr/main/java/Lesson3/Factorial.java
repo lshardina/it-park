@@ -20,7 +20,6 @@ public class Factorial {
             i1++;
         }
         return res1;
-        //System.out.println(n + "! = " + res);
     }
 
     public static int sposob2(int i2, int n2, int res2) {
