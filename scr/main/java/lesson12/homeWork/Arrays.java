@@ -1,6 +1,11 @@
 package lesson12.homeWork;
 
 
+import lesson12.homeWork.myException.MyArrayDataException;
+import lesson12.homeWork.myException.MyArraySizeException;
+
+import java.util.Scanner;
+
 public class Arrays {
 
     private final int m;
@@ -9,7 +14,7 @@ public class Arrays {
     private String[][] array;
 
     public Arrays(String name) {
-        this(name,4, 4);
+        this(name, 4, 4);
     }
 
     public Arrays(String name, int m, int n) {
@@ -29,7 +34,7 @@ public class Arrays {
             for (int j = 0; j < array[i].length; j++) {
                 System.out.print(array[i][j] + "  ");
             }
-            System.out.print(" \n");
+            System.out.print("\n");
         }
     }
 
@@ -38,13 +43,24 @@ public class Arrays {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (array[i][j] == null) {
-                    sum += 0;
+                    System.out.println("Значение в ячейке (" + (i + 1) + " ; " + (j + 1) + ") не заполнено, продолжить расчет?");
+                    System.out.println("Введите 1 - продолжить расчет, или 0 - закончить расчет и перейти к следующей матрице");
+                    Scanner scanner = new Scanner(System.in);
+                    int c;
+                    c = scanner.nextInt();
+                    if (c == 1) {
+                        sum += 0;
+                    } else {
+                        System.out.println("Расчет по матрице " + this.getName() + " отменен.");
+                        System.out.println("-----------------------------------------------------------------");
+                        return;
+                    }
                 } else {
                     try {
                         sum += Integer.parseInt(this.array[i][j].trim());
                     } catch (NumberFormatException exception) {
-                    throw new MyArrayDataException(i,j,this.array[i][j]);
-                }
+                        throw new MyArrayDataException(i, j, this.array[i][j], "Обнаружено нечисловое значение в массиве");
+                    }
                 }
             }
         }
@@ -52,13 +68,13 @@ public class Arrays {
         System.out.println("---------------------------------------------------------");
     }
 
-//    public String getName() {
-//        return name;
-//    }
-
     public void controlSize() {
-         if (array.length != 4 || array[0].length != 4) {
-            throw new MyArraySizeException(this.name);
+        if (array.length != 4 || array[0].length != 4) {
+            throw new MyArraySizeException("Некорректный размер матрицы");
         }
+    }
+
+    public String getName() {
+        return name;
     }
 }
