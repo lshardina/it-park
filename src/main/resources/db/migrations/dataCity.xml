@@ -1,0 +1,35 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet author="LShardina" id="Filling-Cities">
+        <insert tableName="CITY">
+            <!-- Id is auto incremented -->
+            <column name="NAME_RUS" value="Москва" />
+            <column name="NAME_ENG" value="Moscow" />
+            <column name="POPULATION" value="12600" />
+        </insert>
+
+        <insert tableName="CITY">
+            <column name="NAME_RUS" value="Пермь" />
+            <column name="NAME_ENG" value="Perm" />
+            <column name="POPULATION" value="1050" />
+        </insert>
+
+        <insert tableName="CITY">
+            <column name="NAME_RUS" value="Санкт-Петербург" />
+            <column name="NAME_ENG" value="Saint Petersburg" />
+            <column name="POPULATION" value="5380" />
+        </insert>
+
+        <insert tableName="CITY">
+            <column name="NAME_RUS" value="Омск" />
+            <column name="NAME_ENG" value="Omsk" />
+            <column name="POPULATION" value="1140" />
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
+
