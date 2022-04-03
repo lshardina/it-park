@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Сотрудники_ООО_Рога_и_копыта>
+    <employee tab="372" FIO="Кузнецов Иван Петрович" login="kuznec">
+        <department division="Центральный офис" city="Москва"/>
+        <position position="аналитик" salary="100"/>
+    </employee>
+    <employee tab="56" FIO="Мальцев Александр Александрович" login="malcev">
+        <department division="Центральный офис" city="Москва"/>
+        <position position="разработчик" salary="150"/>
+    </employee>
+    <employee tab="398" FIO="Смирнов Андрей Иванович" login="smirnov">
+        <department division="Филиал" city="Владивосток"/>
+        <position position="аналитик" salary="100"/>
+    </employee>
+    <employee tab="877" FIO="Волков Алексей Львович" login="volkov">
+        <department division="Филиал" city="Владивосток"/>
+        <position position="разработчик" salary="150"/>
+    </employee>
+    <employee tab="100" FIO="Петухов Николай Валерьевич" login="petuhov">
+        <department division="Филиал" city="Владивосток"/>
+        <position position="тестировщик" salary="70"/>
+    </employee>
+    <employee tab="767" FIO="Зайцев Константин Эдуардович" login="zaycev">
+        <department division="Филиал" city="Владивосток"/>
+        <position position="тестировщик" salary="70"/>
+    </employee>
+</Сотрудники_ООО_Рога_и_копыта>
