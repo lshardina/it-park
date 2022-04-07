@@ -1,7 +1,7 @@
-package lesson37.security;
+package lesson35.hw.security;
 
-import lesson37.model.User;
-import lesson37.model.type.Status;
+import lesson35.hw.model.type.Status;
+import lesson35.hw.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

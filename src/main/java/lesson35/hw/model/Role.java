@@ -1,4 +1,4 @@
-package lesson37.model;
+package lesson35.hw.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +15,7 @@ import javax.validation.constraints.NotEmpty;
 public class Role {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotEmpty

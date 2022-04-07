@@ -1,4 +1,4 @@
-package lesson37.config;
+package lesson35.hw.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -23,7 +23,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) {
         web.ignoring()
-                .antMatchers("/css/**", "'/webjars/**", "/images/**");
+                .antMatchers("/css/**", "/webjars/**", "/images/**");
     }
 
     @Override
@@ -33,9 +33,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .and()
                 .authorizeRequests().antMatchers(
-                        "/genres", "/genre/**",
-                        "/books", "/book/**",
-                        "/api/**").authenticated()
+                        "/book/**").authenticated()
                 .and()
                 .formLogin();
     }
@@ -46,7 +44,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) {
+    protected void configure(AuthenticationManagerBuilder auth)  {
         auth.authenticationProvider(authenticationProvider());
     }
 

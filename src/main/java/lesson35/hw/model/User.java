@@ -1,5 +1,7 @@
-package lesson37.model;
+package lesson35.hw.model;
 
+
+import lesson35.hw.model.type.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
